@@ -1,3 +1,6 @@
+git push -u origin master
+
+
 # Изучить материал
 
 * https://learn.javascript.ru/ifelse
