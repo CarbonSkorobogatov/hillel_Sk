@@ -1,10 +1,13 @@
 x = +prompt();
-y = +prompt();
 
-res = 1;
-if (x < y) {
-    for (i = x, j = 1; i < y, j <= i; i++, j++) {
-        res = res * j;
-        document.write(res, "<br>");
+k = 0;
+for(i = 1; i <= x; i++){
+    if(x % i == 0){
+        k++;
     }
+}
+if(k == 2){
+    document.write('Число  ', x, '  простое число, оно делится на 1 и на ', x)
+}else{
+    document.write('Число  ', x, '- НЕ ЯВЛЯЕТСЯ ПРОСТЫМ ЯВЛЯЕТСЯ. Оно делится более двух ч')
 }
