@@ -1,4 +1,4 @@
-x = +prompt();
+x = parseInt(prompt());
 
 k = 0;
 for(i = 1; i <= x; i++){
