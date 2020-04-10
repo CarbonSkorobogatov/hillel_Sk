@@ -30,8 +30,21 @@ console.log('sum = ', sum);
 console.log('mul = ', mul);
 */
 //-----------------------------------------------------------------------------------------//
-A.push(50); //Добавление
+A.push(50); //Добавление, возращает длину
+A.pop();    //Обрезает, возращает значение
 A.pop();
-A.pop();
-console.log(A)
+
+// сплайс - метод быстро внедрить
+
+res = A.slice(2, 5); //from x to y  
+
+tres = A.slice(2); //from x to end
+ores = A.slice(-15);
+console.log('sliced - ', res );
+console.log('sliced - ', tres );
+console.log('sliced - ', ores );
+
+console.log(A);
+
+
 
