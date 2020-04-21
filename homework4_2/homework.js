@@ -34,3 +34,5 @@ for (j = 0; j < A.length; j++) {
 
 console.log(A);
 console.log(B);
+
+/*splice*/ 

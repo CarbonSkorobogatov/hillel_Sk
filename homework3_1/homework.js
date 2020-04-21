@@ -10,8 +10,7 @@ A = [];
 A.length = n;
 
 B = [];
-B.length = n;
-b = 0;
+
 
 for (i = 0; i < n; i++) {
     A[i] = Math.floor(Math.random() * 101 - 50);
@@ -25,8 +24,8 @@ for (i = 0; i < n; i++) {
         }
     }
     if (k == 0 && A[i] > 0) {
-        B[b] = A[i];
-        b++;
+        B.push(A[i]);
+
     }
 }
 
@@ -46,7 +45,6 @@ console.log('min = ', min);
 
 console.log("---------------------------");
 console.log('B: ');
-B.lenght = b;
-for (i = 0; i < b; i++) {
+for (i = 0; i < B.length; i++) {
     console.log(B[i]);
 }
