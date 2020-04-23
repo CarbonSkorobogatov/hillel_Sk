@@ -64,3 +64,4 @@ for(i = 0; i < Massive.length; i++){
 
 console.log(Massive);
 console.log('Сумма всех числовых значений в поле равно: ', sumOfNumer);
+comnsole.log('aaaa');
