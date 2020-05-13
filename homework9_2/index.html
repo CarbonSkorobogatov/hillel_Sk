@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="homework.js"></script>
+
+    <style>
+      .border-red{
+        border: 1px solid red;
+      }
+      .error{
+        color: red;
+        font-size: 10px;
+        display: none;
+      }
+      .error.active{
+        display: inline;
+      }
+
+    </style>
+</head>
+<body>
+    <h3>Test</h3>
+    <div>
+      <p style="font-size: 10px">Введите данные, <strong>не используйте числа и пробелы</strong></p>
+      <input class = "border-red" type="text" class="input">
+      <br>
+      <p class="error">Ошибка - не используйте числа или пробелы</p>
+    </div>
+</body>
+</html>
