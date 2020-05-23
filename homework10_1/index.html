@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="homework.js"></script>
+
+    <style>
+      .center--block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        }
+        
+        .range{
+          margin-right: 120px;;
+        }
+
+
+        .range-div{
+          margin-top: 100px;
+          height: 108px;
+          width: 30px;
+          border: 1px solid black;
+          position: relative;
+        }
+
+        .range-div-green{
+
+          width: 30px;
+          background-color: green;
+          position: absolute;
+          bottom: 0;
+        }
+
+        .range-div-red{
+          height: 8px;
+          width: 30px;
+          background-color: red;
+          position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="center--block">
+        <div>
+          <input type="range" class = "range" id="rangeId" name="range" min="0" max="100">
+          <input type="text" id="textId" name ="text">
+        </div>
+        <div class="range-div">
+          <div class="range-div-green" id="green"></div>
+          <div class="range-div-red" id = "red"></div>
+        </div>
+    </div>
+</body>
+</html>
