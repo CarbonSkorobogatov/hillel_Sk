@@ -15,3 +15,4 @@ window.onload = function(){
   var user = new Person('Katya', 29);
   user.run();
 }
+
