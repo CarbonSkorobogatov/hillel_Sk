@@ -1,12 +1,10 @@
 window.onload = function(){
   var block = document.querySelector('.img');
   var shift = false;
+
   step = 10;
-
-
+  z = 0;
     document.onkeydown = function(event){
-
-
 
       if(!inWindow(block)){
         return;
@@ -14,19 +12,19 @@ window.onload = function(){
 
     switch(event.keyCode){
       case 37:
-        block.style.left = block.offsetLeft - step + 'px';
+        if(shift == false){
+          block.style.left = block.offsetLeft - step + 'px';
+        }else{
+          block.style.left = block.offsetLeft - step/2 + 'px';
+        }
         break;
 
-      case 38:
-        block.style.top = block.offsetTop - step + 'px';
-        break;
-      
       case 39:
-        block.style.left = block.offsetLeft + step + 'px';
-        break;
-      
-      case 40:
-        block.style.top = block.offsetTop + step + 'px';
+        if(shift == false){
+          block.style.left = block.offsetLeft + step + 'px';
+        }else{
+          block.style.left = block.offsetLeft + step/2 + 'px';
+        }
         break;
 
       case 16:
@@ -38,9 +36,34 @@ window.onload = function(){
         shift = false;
       }
       break;
+
+      case 32:
+        if(shift == true){
+        }else{
+          Jump();
+        }
+      break;
+
+      
       
     }
 }
+
+function Jump(){
+
+  block.style.top = block.offsetTop - 3*step + 'px';
+  z += 3*step;
+
+  setTimeout(function(){
+    block.style.top = block.offsetTop + 3*step + 'px';
+    z -= 3*step; 
+  }, 500)
+
+  if(z == 25*step){
+    document.write('USER WIN');
+  }
+}
+
 
 function inWindow(block){
   var startpointX = 0,
@@ -69,5 +92,6 @@ function inWindow(block){
 
     return false;
 }
-    
+
 }
+    
